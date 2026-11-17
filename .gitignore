@@ -1,1 +1,3 @@
 files/
+.parts/
+__pycache__/

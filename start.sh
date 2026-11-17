@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-mkdir -p files
-exec updog -d files -p "${PORT:-9090}" --password "$FILE_PASSWORD"
+mkdir -p files .parts
+exec waitress-serve --host=0.0.0.0 --port="${PORT:-9090}" app:app
